@@ -6,8 +6,8 @@
     <title>User Registration Form</title>
 </head>
 <body>
-    <div>
-    <h2>User Registration</h2>
+    <div class="container">
+    <h2 class="heading">User Registration</h2>
 
     <?php
         // Handles form submission
@@ -49,7 +49,7 @@
             $conn->close();
         }
     ?>
-    <form  method="post" action="<?php echo $_SERVER["PHP_SELF"]; ?>>
+    <form class="registration" method="post" action="<?php echo $_SERVER["PHP_SELF"]; ?>>
         
         <input type="text" name="name" placeholder='Name' required><br>
 
@@ -61,7 +61,7 @@
 
         <input type="text" name="postal_code" placeholder='Postal Code' required><br>
 
-        <button>Submit</button>
+        <button class="btn">Submit</button>
     </form>
     </div>
 </body>
