@@ -29,7 +29,24 @@
             if ($conn->connect_error) {
                die("Connection failed: " . $conn->connect_error);
             }
+            // Insert user information into the 'User' table
+            $insertUserSql = "INSERT INTO User (name) VALUES ('$name')";
+            if ($conn->query($insertUserSql) === FALSE) {
+               echo "Error: " . $insertUserSql . "<br>" . $conn->error;
+            }
 
+            // Get the ID of the newly inserted user
+            $userId = $conn->insert_id;
+
+            // Insert address information into the 'Address' table
+            $insertAddressSql = "INSERT INTO Address (user_id, street_address, city, state, postal_code)
+                             VALUES ('$userId', '$streetAddress', '$city', '$state', '$postalCode')";
+            if ($conn->query($insertAddressSql) === FALSE) {
+               echo "Error: " . $insertAddressSql . "<br>" . $conn->error;
+            }
+
+            echo "User registration successful!";
+            $conn->close();
         }
     ?>
     <form>
