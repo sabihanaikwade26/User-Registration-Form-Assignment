@@ -9,7 +9,7 @@
 <body>
     <div class="container">
     <h2 class="heading">User Registration</h2>
-
+  
     <?php
         // Handles form submission
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -46,7 +46,7 @@
                echo "Error: " . $insertAddressSql . "<br>" . $conn->error;
             }
 
-            echo "User registration successful!";
+            echo "<p class='submitmsg'>User registration successful!</p>";
             $conn->close();
         }
     ?>
@@ -60,7 +60,7 @@
 
         <input type="text" name="state" placeholder='State' required><br>
 
-        <input type="text" name="postal_code" placeholder='Postal Code' required><br>
+        <input type="number" name="postal_code" placeholder='Postal Code' required><br>
 
         <button class="btn">Submit</button>
     </form>

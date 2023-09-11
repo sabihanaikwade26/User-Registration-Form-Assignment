@@ -6,7 +6,8 @@
 
 .container{
     max-width: 80%;
-    background-color: rgb(174, 152, 195);
+    height: 100vh;
+    background: linear-gradient(rgb(164, 165, 237),rgb(212, 45, 212));
     padding: 34px;
     margin: auto;
 }
@@ -46,4 +47,16 @@ form label {
    width: 10%;
    border-radius: 6px;
    font-size: 20px;
+   cursor: pointer;
 } 
+
+.btn:hover{
+    background-color: blueviolet;
+    color: white;
+}
+
+.submitmsg{
+    text-align: center;
+    color: blue;
+    font-size: 19px;
+}
