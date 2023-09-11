@@ -8,6 +8,17 @@
 <body>
     <div>
     <h2>User Registration</h2>
+
+    <?php
+        // Handles form submission
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            $name = $_POST["name"];
+            $streetAddress = $_POST["street_address"];
+            $city = $_POST["city"];
+            $state = $_POST["state"];
+            $postalCode = $_POST["postal_code"];
+        }
+    ?>
     <form>
         
         <input type="text" name="name" placeholder='Name' required><br>
