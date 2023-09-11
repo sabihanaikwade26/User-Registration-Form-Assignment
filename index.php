@@ -49,7 +49,7 @@
             $conn->close();
         }
     ?>
-    <form>
+    <form  method="post" action="<?php echo $_SERVER["PHP_SELF"]; ?>>
         
         <input type="text" name="name" placeholder='Name' required><br>
 
