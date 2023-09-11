@@ -13,6 +13,9 @@
 
 .container h2{
     text-align: center;
+    color: white;
+    padding: 10px 10px;
+    font-size: 40px;
 }
 
 input{
@@ -38,7 +41,9 @@ form label {
     margin-right: 10px; /* Add some margin for spacing between label and input */
 }
 
-btn{
+.btn{
    padding: 10px 10px;
-   width: 30%;
+   width: 10%;
+   border-radius: 6px;
+   font-size: 20px;
 } 
